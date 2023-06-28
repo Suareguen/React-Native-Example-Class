@@ -117,7 +117,10 @@ Create a folder named `screens` and add a `HomeScreen.js` component, then copy t
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/5b634da3-736c-4970-a0cd-191014a1c513)
 
 
-Let's create another Screen, `Details.js` for exmaple.
+Let's create another Screen, `Details.js` for example, like this:
+
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/8d622ca6-edab-4623-aa31-2eef287633f5)
+
 
 We need to import in our `App.js`:
 ```
