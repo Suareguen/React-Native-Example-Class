@@ -140,6 +140,57 @@ In our `App.js` we should see someting like this:
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/b0fd0ab7-2f3e-4192-b09b-f40cd579d402)
 
 
+As we can see in the Button component we have a onPress property to launch our navigation property which contains a navigate method to specify the Screen we wants to go, a second paramater can be passed through the navigate method and this would be received in the component we go and we can use this value in the new component.
+
+HomeScreen
+
+```
+
+            <Button
+              title="Go to Details"
+              //Como segundo parámetro podemos pasar props a las Screens que vayamos a enlazar, 
+              // en este caso le pasamos un id con el valor de 'textProp'
+              onPress={() =>
+                navigation.navigate("Details", {
+                  id: "textProp",
+                })
+              }
+            />
+}
+```
+
+DetailsScreen
+
+
+```
+
+export default function DetailsScreen({ navigation, route }) {
+
+    // Podemos por medio del objeto route obtener el id que le hemos pasado desde la ScreenHome
+    const { id } = route.params
+
+  return (
+    <>
+      <SafeAreaView style={styles.container}>
+        <Text>Details</Text>
+        {/* En el Text veríamso el valor de textProp pasado anteriormente desde HomeScreen */}
+        <Text>Text Prop: { id }</Text>
+
+        <View>
+          <Button
+            title="Go to Home"
+            onPress={() => navigation.navigate("Home")}
+          />
+        </View>
+      </SafeAreaView>
+    </>
+  );
+}
+```
+
+
+
+
 
 
 
