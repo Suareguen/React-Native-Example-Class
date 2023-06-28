@@ -159,7 +159,7 @@ HomeScreen
 }
 ```
 
-DetailsScreen
+***DetailsScreen***
 
 
 ```
@@ -173,7 +173,7 @@ export default function DetailsScreen({ navigation, route }) {
     <>
       <SafeAreaView style={styles.container}>
         <Text>Details</Text>
-        {/* En el Text veríamso el valor de textProp pasado anteriormente desde HomeScreen */}
+        {/* En el Text veriamos el valor de textProp pasado anteriormente desde HomeScreen */}
         <Text>Text Prop: { id }</Text>
 
         <View>
