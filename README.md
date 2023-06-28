@@ -212,6 +212,8 @@ The next step is create a `Pokedex.js` , import in pur `App.js` and add a new `<
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/8c0f4e41-82f6-4b83-a38c-07e6c1ea4b93)
 
+In the image where  `<Tab.Screen name='Pokedex' component={PokedexScreenFake} />` is our `<Tab.Screen name='Pokedex' component={Pokedex} />`.
+
 
 
 
