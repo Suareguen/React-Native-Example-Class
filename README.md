@@ -26,5 +26,31 @@ sudo apt-get -f install
 ```bash
 sudo apt-get -y install watchman
 ```
+### Create a Project with Expo
+
+The process of running a new Expo project consists of three steps.
 
 
+
+1.- Initializing a Project
+
+```bash
+npx create-expo-app my-app && cd my-app
+```
+
+
+2.- Starting the development server with Expo CLI
+
+```bash
+npx expo strat
+```
+
+3-. Opening the app on your device with Expo Go to see your changes live
+
+
+
+For Expo Go to work, we require:
+
+To create an account in Expo’s website.
+The computer and the mobile phone need to be connected to the same WiFi network.
+We need download Expo Go in the App Store.
