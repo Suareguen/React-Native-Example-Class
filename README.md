@@ -112,9 +112,14 @@ npm install @react-navigation/native-stack
 
 
 The Navigator should contain Screen elements as its children to define the route configuration.
+Create a folder named `screens` and add a `HomeScreen.js` component, then copy the structure typed in `App.js` and paste in the `HomeScree.js`. You should see something like this: 
+
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/5b634da3-736c-4970-a0cd-191014a1c513)
+
+
 Let's create another Screen, `Details.js` for exmaple.
 
-First we need to import in our `App.js`:
+We need to import in our `App.js`:
 ```
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
