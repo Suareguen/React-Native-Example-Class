@@ -234,7 +234,7 @@ import {
 // Create a client
 const queryClient = new QueryClient()
 ```
-And add our QueryClientProvider in pur aplication, you should see something like this:
+And add our QueryClientProvider in our aplication, you should see something like this:
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/81ebc666-68d4-4327-a42f-083544d16567)
 
