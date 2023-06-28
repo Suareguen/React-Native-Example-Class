@@ -205,7 +205,10 @@ npm install @react-navigation/bottom-tabs
 Its API is very similar to the Navigation Stack. Our Navigation component would look similar to the following:
 
 Now we reestructure the `App.js` and should see like this: 
+
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/dbd8581c-8735-4de9-8b6c-82b88b8887c4)
+
+
 
 
 
