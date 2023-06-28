@@ -49,6 +49,9 @@ This process may take few minutes, but when the process finish we should see the
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/7b14175c-a40a-4f9f-af75-a9475be97e74)
 
+Now we open Expo Go in our device and scan the QR code.
+Remember to connect your device and computer to the same Wifi.
+
 
 
 3-. Opening the app on your device with Expo Go to see your changes live
@@ -64,4 +67,6 @@ We need download Expo Go in the App Store.We need download Expo Go in the App St
 First when we start the project and open the Code Editor we shuould see the following project structure:
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/6e50237a-15e3-473d-a710-0fbc08fd1819)
+
+
 
