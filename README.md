@@ -74,6 +74,10 @@ You should have a structure like this:
 
 Now in the Header we can create a Header Component where we show the Title of the App. (You can see the component in the folder components of this  repository.
 
+The next step is to import the Header and Body components in the `App.js` like this:
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/171a17ff-79b2-4d2e-9d80-c6b11bf115f5)
+
+
 ## Installing React Navigator
 
 Installing React Navigation for React Native requires installing the required packages in our project:
@@ -86,9 +90,12 @@ To frontload the installation work, let’s also install and configure dependenc
 
 The libraries we will install now are react-native-screens and react-native-safe-area-context.
 
-´´´
+```
 npx expo install react-native-screens react-native-safe-area-context
-´´´
+
+```
+
+
 
 
 
