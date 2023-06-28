@@ -188,6 +188,13 @@ export default function DetailsScreen({ navigation, route }) {
 }
 ```
 
+## Installing Navigation Menus
+
+React Navigation offers different GUI elements which we can use to implement navigation for our users.
+
+###Tab Navigator
+
+Possibly the most common style of navigation in mobile apps is tab-based navigation. It is usually placed at the bottom of the screen.
 
 
 
