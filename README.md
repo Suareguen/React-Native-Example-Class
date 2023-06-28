@@ -102,6 +102,14 @@ npx expo install react-native-screens react-native-safe-area-context
 
 ```
 
+For our App to be able to render different screens, we need to set up all the various components and manage how to move between them. First we need to install the component that handles navigation.
+
+```
+npm install @react-navigation/native-stack
+```
+
+
+
 
 
 
