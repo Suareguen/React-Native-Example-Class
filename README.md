@@ -68,6 +68,33 @@ First when we start the project and open the Code Editor we shuould see the foll
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/6e50237a-15e3-473d-a710-0fbc08fd1819)
 
+Now we create a `components` folder and we create a `Header.js` and `Body.js` scripts.
+
+```react
+import { useState } from "react";
+import { ImageBackground } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View, Button, Alert, TextInput } from "react-native";
+
+export default function Header() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>PokéApp</Text>
+    </View>
+
+  );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 0.4,
+    },
+  text: {
+    fontSize: 50,
+    color: 'blue'
+  },
+});
+
+```
 
 
 
