@@ -112,7 +112,14 @@ npm install @react-navigation/native-stack
 The Navigator should contain Screen elements as its children to define the route configuration.
 Let's create another Screen, `Details.js` for exmaple.
 
-In our aplication we should see someting like this:
+First we need to import:
+```
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+```
+
+In our `App.js` we should see someting like this:
+
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/b0fd0ab7-2f3e-4192-b09b-f40cd579d402)
 
