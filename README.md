@@ -109,14 +109,22 @@ npm install @react-navigation/native-stack
 ```
 ``` createNativeStackNavigator``` is a function that returns an object containing two properties: Screen and Navigator. Screen lets us configure the different screens in our app, while Navigator manages the routing between the screens.
 
+
+
 The Navigator should contain Screen elements as its children to define the route configuration.
 Let's create another Screen, `Details.js` for exmaple.
 
-First we need to import:
+First we need to import in our `App.js`:
 ```
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 ```
+
+Next Steps:
+- NavigationContainer is a component that manages our navigation tree and contains the navigation state. 
+This component must wrap up the navigator’s structure. 
+- Creates a navigation component named Stack using the createNativeStackNavigator() function provided by the @react-navigation/native-stack library.
+This Stack component is used to define and manage stack-based navigation in your React Native application.
 
 In our `App.js` we should see someting like this:
 
