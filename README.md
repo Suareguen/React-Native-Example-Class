@@ -46,13 +46,12 @@ npx expo strat
 ```
 
 This process may take few minutes, but when the process finish we should see the following output: 
+
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/7b14175c-a40a-4f9f-af75-a9475be97e74)
 
 
 
 3-. Opening the app on your device with Expo Go to see your changes live
-
-
 
 For Expo Go to work, we require:
 
@@ -63,4 +62,6 @@ We need download Expo Go in the App Store.We need download Expo Go in the App St
 ## First Steps
 
 First when we start the project and open the Code Editor we shuould see the following project structure:
+
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/6e50237a-15e3-473d-a710-0fbc08fd1819)
 
