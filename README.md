@@ -109,6 +109,15 @@ npm install @react-navigation/native-stack
 ```
 ``` createNativeStackNavigator``` is a function that returns an object containing two properties: Screen and Navigator. Screen lets us configure the different screens in our app, while Navigator manages the routing between the screens.
 
+The Navigator should contain Screen elements as its children to define the route configuration.
+Let's create another Screen, `Details.js` for exmaple.
+
+In our aplication we should see someting like this:
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/8b3f20c7-ba4b-4107-b28a-2000f4a182d2)
+
+
+
+
 
 
 
