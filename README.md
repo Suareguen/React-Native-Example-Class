@@ -70,7 +70,7 @@ First when we start the project and open the Code Editor we shuould see the foll
 
 Now we create a `components` folder and we create a `Header.js` and `Body.js` scripts.
 
-```react
+```
 import { useState } from "react";
 import { ImageBackground } from "react-native";
 import { SafeAreaView, StyleSheet, Text, View, Button, Alert, TextInput } from "react-native";
