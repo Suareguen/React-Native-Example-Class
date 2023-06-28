@@ -113,7 +113,9 @@ The Navigator should contain Screen elements as its children to define the route
 Let's create another Screen, `Details.js` for exmaple.
 
 In our aplication we should see someting like this:
-![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/8b3f20c7-ba4b-4107-b28a-2000f4a182d2)
+
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/b0fd0ab7-2f3e-4192-b09b-f40cd579d402)
+
 
 
 
