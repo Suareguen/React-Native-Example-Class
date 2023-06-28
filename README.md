@@ -208,6 +208,11 @@ Now we reestructure the `App.js` and should see like this:
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/dbd8581c-8735-4de9-8b6c-82b88b8887c4)
 
+The next step is create a `Pokedex.js` , import in pur `App.js` and add a new `<Tab.Screen name='Pokedex' component={Pokedex} />`. We should see a view like this in our `App.js`:
+
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/8c0f4e41-82f6-4b83-a38c-07e6c1ea4b93)
+
+
 
 
 
