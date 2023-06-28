@@ -107,7 +107,7 @@ For our App to be able to render different screens, we need to set up all the va
 ```
 npm install @react-navigation/native-stack
 ```
-
+``` createNativeStackNavigator``` is a function that returns an object containing two properties: Screen and Navigator. Screen lets us configure the different screens in our app, while Navigator manages the routing between the screens.
 
 
 
