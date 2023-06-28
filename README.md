@@ -196,6 +196,14 @@ React Navigation offers different GUI elements which we can use to implement nav
 
 Possibly the most common style of navigation in mobile apps is tab-based navigation. It is usually placed at the bottom of the screen.
 
+Tab Navigator is not part of the core of React Navigator, so we need to install it to be able to use it.
+
+```
+npm install @react-navigation/bottom-tabs
+```
+
+
+
 
 
 
