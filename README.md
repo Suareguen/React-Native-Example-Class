@@ -208,11 +208,36 @@ Now we reestructure the `App.js` and should see like this:
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/dbd8581c-8735-4de9-8b6c-82b88b8887c4)
 
-The next step is create a `Pokedex.js` , import in pur `App.js` and add a new `<Tab.Screen name='Pokedex' component={Pokedex} />`. We should see a view like this in our `App.js`:
+The next step is create a `PokedexScreen.js` , import in pur `App.js` and add a new `<Tab.Screen name='Pokedex' component={PokedexScreen} />`. We should see a view like this in our `App.js`:
+In our `PokedexScreen.js` only create a Text component, then we will change the entire structure of the component.
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/8c0f4e41-82f6-4b83-a38c-07e6c1ea4b93)
 
-In the image where  `<Tab.Screen name='Pokedex' component={PokedexScreenFake} />` is our `<Tab.Screen name='Pokedex' component={Pokedex} />`.
+In the image where  `<Tab.Screen name='Pokedex' component={PokedexScreenFake} />` is our `<Tab.Screen name='Pokedex' component={PokedexScreen} />`.
+
+## Installing React Query
+
+React Query is a library created for managing server state: it handles requests and queries to external services while optimizing performance. It requires zero-config but can be customized to your liking as your application grows.
+
+```
+npm i react-query
+```
+
+When the installation finihed we need to add this in pur `App.js`:
+
+```
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
+
+// Create a client
+const queryClient = new QueryClient()
+```
+
+
+
+
 
 
 
