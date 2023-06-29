@@ -336,10 +336,105 @@ In our `PokedexScreen.js` we aplly the above example and we should see something
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/c0b51adc-5e4b-422e-ac4c-0462474f8f62)
 
 
+We have a Pokedex List created, now let's create a `PokemonScreen.js` to show some information about the pokemon we want.
+In this Screen we receive some props passed trhough Item component in the `PokedexScreen.js`, in this case we pass in the navigation Button the name of our pokemon, an information obtained to show our Pokedex.
 
+```
+  const Item = ({ name, url }) => (
+    <View style={{ alignItems: "center", borderWidth: 1, margin: 5, padding: 5, backgroundColor: 'grey', borderRadius: 4 }}>
+      <Text>{capitalizeFirstLetter(name)}</Text>
+      <View>
+        <Button
+          title="See More Details"
+          onPress={() =>
+            // Here we passs name as prop to the link Screen
+            navigation.navigate("Pokemon", {
+              //url: url,
+              name: name,
+            })
+          }
+        />
+      </View>
+    </View>
+  );
+```
 
+In our Pokemon service created before, we add a new service to search an individual pokemon:
 
+```
+export const getPokemonsById = async (name) => {
+  try {
+    const { data } = await api.get(`/pokemon/${name}/`);
+    return data;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+```
 
+Like in the `PokedexScreen.js` import the necessary apply the useQuery, you should see something like this:
+TIP: You can make the component as you wish, this is only a guide.
+
+```
+import { Button, Image } from "react-native";
+import { View, Text } from "react-native";
+import { useQuery } from "react-query";
+import { getPokemonsById } from "../services/pokemonService";
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+export function PokemonScreen({ route }) {
+  const { name } = route.params;
+
+  const { isLoading, isError, data, error } = useQuery("pokemon", (id) =>
+    getPokemonsById(name)
+  );
+  if (isLoading) {
+    return <Text>Loading...</Text>;
+  }
+  if (isError) {
+    return <Text>Error: {error.message}</Text>;
+  }
+  const showTypes = (array) => {
+
+      return array.map((type, idx) => {
+        return <Text key={idx}>{type.type.name}</Text>;
+  })}
+
+  return (
+    <>
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "space-around",
+          borderWidth: 3,
+          margin: 5,
+          padding: 5,
+          backgroundColor: "grey",
+          borderRadius: 4,
+        }}
+      >
+        <View style={{ borderWidth: 2 }}>
+          <Text>{capitalizeFirstLetter(name)}</Text>
+          <View>
+            <Image
+              source={{ uri: data.sprites.front_default }}
+              style={{ width: 200, height: 200 }}
+            />
+          </View>
+        </View>
+        <View style={{ borderWidth: 1 }}>
+          <Text>Types: </Text>
+          {showTypes(data.types)}
+        </View>
+      </View>
+    </>
+  );
+}
+```
 
 
 
