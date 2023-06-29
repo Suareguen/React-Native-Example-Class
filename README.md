@@ -274,6 +274,7 @@ export const getPokemons = async () => {
 ```
 
 Now we come back to PokdexScreen and import our Service and useQuery: 
+
 ```
 import { useQuery } from "react-query";
 import { getPokemons } from "../services/pokemonService";
@@ -292,8 +293,47 @@ export function PokedexScreen({ navigation }) {
 
 }
 ```
+The next Step is to show the data in our `PokedexScreen.js` with a FlatList Component.
 
+FlatList example:
 
+```
+const DATA = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'First Item',
+  },
+  {
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: 'Second Item',
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Third Item',
+  },
+];
+
+const Item = (title) => (
+  <View style={styles.item}>
+    <Text style={styles.title}>{title}</Text>
+  </View>
+);
+
+const App = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <FlatList
+        data={DATA}
+        renderItem={({item}) => <Item title={item.title} />}
+        keyExtractor={item => item.id}
+      />
+    </SafeAreaView>
+  );
+};
+```
+In our `PokedexScreen.js` we aplly the above example and we should see something like this::
+
+![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/c0b51adc-5e4b-422e-ac4c-0462474f8f62)
 
 
 
