@@ -208,10 +208,11 @@ Now we reestructure the `App.js` and should see like this:
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/dbd8581c-8735-4de9-8b6c-82b88b8887c4)
 
-The next step is create a `PokedexScreen.js` , import in pur `App.js` and add a new `<Tab.Screen name='Pokedex' component={PokedexScreen} />`. We should see a view like this in our `App.js`:
-In our `PokedexScreen.js` only create a Text component, then we will change the entire structure of the component.
+The next step is create a `PokedexScreen.js` , import in pur `App.js` and add a new `<Tab.Screen name='Pokedex' component={PokedexScreen} />`. In our `PokedexScreen.js` only create a Text component, then we will change the entire structure of the component. We should see a view like this in our `App.js`:
+
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/8c0f4e41-82f6-4b83-a38c-07e6c1ea4b93)
+
 
 In the image where  `<Tab.Screen name='Pokedex' component={PokedexScreenFake} />` is our `<Tab.Screen name='Pokedex' component={PokedexScreen} />`.
 
@@ -223,7 +224,7 @@ React Query is a library created for managing server state: it handles requests 
 npm i react-query
 ```
 
-When the installation finihed we need to add this in pur `App.js`:
+When the installation finihed we need to add this in our `App.js`:
 
 ```
 import {
@@ -237,6 +238,66 @@ const queryClient = new QueryClient()
 And add our QueryClientProvider in our aplication, you should see something like this:
 
 ![image](https://github.com/Suareguen/React-Native-Example-Class/assets/103899316/81ebc666-68d4-4327-a42f-083544d16567)
+
+
+### useQuery
+To subscribe to a query in our components or custom hooks, we can call the useQuery hook.
+
+useQuery requieres to work at least:
+- A unique key (name) for the query
+- A function that returns a promise that either resolves the data, or throws an error.
+
+Create a `apiService.js` like in React:
+
+```
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: `https://pokeapi.co/api/v2`,
+});
+
+export default api;
+```
+
+Then create the service you want, in this case i use PokeApi and the service show like this: 
+
+```
+import api from "./apiService";
+export const getPokemons = async () => {
+  try {
+    const { data } = await api.get("/pokemon/?limit=151");
+    return data;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+```
+
+Now we come back to PokdexScreen and import our Service and useQuery: 
+```
+import { useQuery } from "react-query";
+import { getPokemons } from "../services/pokemonService";
+```
+Then inside of our component `PokedexScreen.js` we use useQuery:
+
+```
+export function PokedexScreen({ navigation }) {
+  const { isLoading, isError, data, error } = useQuery("pokemons", getPokemons);
+  if (isLoading) {
+    return <Text>Loading...</Text>;
+  }
+  if (isError) {
+    return <Text>Error: {error.message}</Text>;
+  }
+
+}
+```
+
+
+
+
+
+
 
 
 
