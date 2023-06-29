@@ -386,9 +386,11 @@ function capitalizeFirstLetter(string) {
 }
 
 export function PokemonScreen({ route }) {
+//Here we receive the params passed by PokedexScreen.js
   const { name } = route.params;
-
-  const { isLoading, isError, data, error } = useQuery("pokemon", (id) =>
+//The name we passed before is used to call the service of the API and search the pokemon by name and show the particular information about the pokemon selected.
+//Notice before in the PokedexScreen component we call the service directly, but now as we need to pass an argument we need to call our service by callback function passing as argument the pokemon name in our case.
+  const { isLoading, isError, data, error } = useQuery("pokemon", (name) =>
     getPokemonsById(name)
   );
   if (isLoading) {
@@ -397,8 +399,8 @@ export function PokemonScreen({ route }) {
   if (isError) {
     return <Text>Error: {error.message}</Text>;
   }
+//Function to show different types of pokemons
   const showTypes = (array) => {
-
       return array.map((type, idx) => {
         return <Text key={idx}>{type.type.name}</Text>;
   })}
