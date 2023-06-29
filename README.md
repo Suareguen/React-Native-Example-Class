@@ -224,6 +224,10 @@ React Query is a library created for managing server state: it handles requests 
 npm i react-query
 ```
 
+```
+npm i axios
+```
+
 When the installation finihed we need to add this in our `App.js`:
 
 ```
